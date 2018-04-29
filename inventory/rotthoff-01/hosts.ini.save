@@ -1,0 +1,31 @@
+[all]
+kube-01.workstation.rotthoff.home 	 ansible_host=192.168.35.104 ip=192.168.35.104
+kube-02.workstation.rotthoff.home 	 ansible_host=192.168.35.105 ip=192.168.35.105
+kube-03.workstation.rotthoff.home 	 ansible_host=192.168.35.106 ip=192.168.35.106
+
+[kube-master]
+kube-01.workstation.rotthoff.home 	 
+kube-02.workstation.rotthoff.home 	 
+kube-03.workstation.rotthoff.home
+
+[kube-node]
+kube-01.workstation.rotthoff.home 	 
+kube-02.workstation.rotthoff.home 	 
+kube-03.workstation.rotthoff.home 	 
+
+[etcd]
+kube-01.workstation.rotthoff.home 	 
+kube-02.workstation.rotthoff.home 	 
+kube-03.workstation.rotthoff.home 	 
+
+[k8s-cluster:children]
+kube-node 	 
+kube-master 	 
+
+[calico-rr]
+
+[vault]
+kube-01.workstation.rotthoff.home 	 
+kube-02.workstation.rotthoff.home 	 
+kube-03.workstation.rotthoff.home 	 
+
